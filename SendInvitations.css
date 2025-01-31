@@ -8,42 +8,56 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-image: url('./assets/email.jpg'); /* Add background image */
+    background-size: cover; /* Ensure the background image covers the entire screen */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    filter: brightness(0.8); /* Optional: make the background slightly dim */
 }
 
 h2 {
     color: #333;
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 20px;
     text-align: center;
+    font-weight: 600;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
 }
 
 /* Styling for the container */
 .container {
-    background-color: #fff;
-    padding: 30px 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Subtle shadow for a modern look */
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
     text-align: center;
+    backdrop-filter: blur(10px); /* Optional: blur the background behind the container */
 }
 
 /* Styling the file input */
 input[type="file"] {
-    margin-bottom: 15px;
-    padding: 10px;
-    font-size: 1rem;
+    margin-bottom: 20px;
+    padding: 12px;
+    font-size: 1.1rem;
     width: 100%;
     cursor: pointer;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
     outline: none;
-    background-color: #f9f9f9;
-    transition: border 0.2s;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
 }
 
     input[type="file"]:hover {
-        border-color: #007bff;
+        border-color: #007bff; /* Highlight on hover */
+        background-color: #f0f8ff; /* Light background change */
+    }
+
+    input[type="file"]:focus {
+        border-color: #0056b3;
+        box-shadow: 0 0 8px rgba(0, 91, 255, 0.5); /* Focus effect */
     }
 
 /* Styling the button */
@@ -51,20 +65,22 @@ button {
     background-color: #007bff;
     color: #fff;
     border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 1rem;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-size: 1.1rem;
     cursor: pointer;
     width: 100%;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s;
 }
 
     button:hover {
         background-color: #0056b3;
+        transform: translateY(-2px); /* Lift effect */
     }
 
     button:active {
         background-color: #003f7f;
+        transform: translateY(1px); /* Pressed effect */
     }
 
 /* Responsive design */
@@ -74,10 +90,10 @@ button {
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 
     button {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 }
